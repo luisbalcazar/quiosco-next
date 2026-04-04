@@ -9,6 +9,11 @@ interface Store {
   decreaseQuantity: (id: Product["id"]) => void;
   removeItem: (id: Product["id"]) => void;
   clearOrder: () => void;
+  //Delete Modal
+  isDeleteModalOpen: boolean;
+  selectedProduct: Product | null;
+  openDeleteModal: (product: Product) => void;
+  closeDeleteModal: () => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
@@ -85,4 +90,11 @@ export const useStore = create<Store>((set, get) => ({
       order: [],
     }));
   },
+  //Delete Modal
+  isDeleteModalOpen: false,
+  selectedProduct: null,
+  openDeleteModal: (product) =>
+    set({ isDeleteModalOpen: true, selectedProduct: product }),
+  closeDeleteModal: () =>
+    set({ isDeleteModalOpen: false, selectedProduct: null }),
 }));

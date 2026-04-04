@@ -1,5 +1,6 @@
 import ToastNotification from "@/components/ui/ToastNotification";
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import DeleteProductModal from "@/components/products/DeleteProductModal";
 
 export default async function AdminLayout({
   children,
@@ -19,6 +20,7 @@ export default async function AdminLayout({
       </div>
 
       <ToastNotification />
+      <DeleteProductModal />
     </>
   );
 }

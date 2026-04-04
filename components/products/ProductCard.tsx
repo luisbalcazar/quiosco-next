@@ -15,9 +15,10 @@ export default function ProductCard({ product }: ProductCardProps) {
       <Image
         width={300}
         height={400}
+        min-height={400}
         src={imagePath}
         alt={`Imagen platillo ${product.name}`}
-        className="w-full object-cover"
+        className="w-full h-48 object-cover"
       />
       <div className="p-5 flex flex-col flex-1">
         <h3 className="text-2xl font-bold line-clamp-2 min-h-[8rem]">
