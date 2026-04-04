@@ -17,7 +17,9 @@ export default function ImageUpload({ image }: { image: string | undefined }) {
       onSuccess={(result, { widget }) => {
         if (result.event === "success") {
           widget.close();
-          setImageUrl(result.info.secure_url);
+          if (typeof result.info !== "string" && result.info?.secure_url) {
+            setImageUrl(result.info.secure_url);
+          }
         }
       }}
     >
