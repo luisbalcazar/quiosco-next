@@ -1,6 +1,6 @@
 ## Quiosco App
 
-E-commerce web application for a restaurant, featuring screens to browse and add products by category, manage products and orders, and review and approve orders.
+Restaurant Ordering System featuring screens to browse and add products by category, manage products and orders, and review and approve orders.
 
 ## Tech Stack
 
