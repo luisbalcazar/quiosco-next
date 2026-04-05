@@ -47,3 +47,4 @@ npm run dev
 - Add testing with Jest
 - Improve UX
 - Add full-screen product modal
+- Add user authentication and role management
